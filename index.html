@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Countdown Timer</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="blurryLoading.js" defer></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- <section class="bg load"></section> -->
+        <div class="loading-text load">0%</div>
+
+        <h1 class="countdown countdown-header" style="display: none">Countdown Timer</h1>
+
+        <div class="countdown-container countdown" style="display: none">
+            <div class="countdown-element days-count">
+                <p class="text" id="days">0</p>
+                <span>days</span>
+            </div>
+            <div class="countdown-element hours-count">
+                <p class="text" id="hours">0</p>
+                <span>hours</span>
+            </div>
+            <div class="countdown-element mins-count">
+                <p class="text" id="mins">0</p>
+                <span>mins</span>
+            </div>
+            <div class="countdown-element secs-count">
+                <p class="text" id="secs">0</p>
+                <span>secs</span>
+            </div>
+        </div>
+        <div class="custom countdown" style="display: none;">
+            <p id="date"></p>
+            <div class="date-update" style="display: none;">
+                <input id="date-input" type="date" value="2021-10-28">
+                <input id="set" type="submit" value="set">
+            </div>
+
+        </div>
+    </body>
+</html>

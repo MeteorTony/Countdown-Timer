@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee Outline|Aldrich|Kavoon");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    cursor: wait;
+
+    font-family: "Bungee Outline", serif;
+    color: white;
+    text-shadow: 2px 2px 5px green;
+    font-weight: bold;
+}
+
+body::after {
+    content: "";
+    background-image: url("matrix.gif");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: black;
+    opacity: var(--opac, 1);
+    filter: var(--fil, "");
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    }
+
+/* manage header */
+.countdown-header{
+    color: turquoise;
+    font-size: 5vw;
+    transition: font-size 1s, color 1s;
+    margin: -0.5vw 0;
+}
+
+.countdown-header:hover{
+    color: lawngreen;
+    font-size: 5.5vw;
+    text-shadow: 2px 5px 5px grey;
+}
+
+/* manage counter */
+.countdown-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.countdown-element{
+    text-align: center;
+}
+
+.countdown-element p{
+    font-size: 6vw;
+    line-height: 1;
+    margin: 0 3vw;
+    transition: font-size 1s, color 1s;
+}
+
+.countdown-element span{
+    font-size: 1.5vw;
+    transition: font-size 1s, color 1s;
+}
+
+.countdown-element:hover{
+    color: lime;
+    text-shadow: 2px 5px 5px grey;
+}
+
+.countdown-element:hover p{
+    color: lime;
+    font-size: 6.5vw;
+}
+
+.countdown-element:hover span{
+    font-size: 2vw;
+}
+
+/* manage date */
+#date{
+    font-size: 2vw;
+    font-family: "Kavoon", serif;
+    color: lightpink;
+    transition: font-size 1s, color 1s;
+    font-weight: normal;
+}
+
+#date:hover{
+    color: pink;
+    /* font-size: 2.25vw;
+    text-shadow: 2px 5px 5px grey; */
+}
+
+#date span{
+    transition: 1s;
+}
+
+#date span:hover{
+    color: orangered;
+    font-size: 2.25vw;
+    text-shadow: 2px 5px 5px grey;
+}
+
+.custom button, #set{
+    background-color: transparent;
+    margin-left: 2vw;
+    border-radius: 4px;
+    size: 2vw;
+    position: relative;
+    display: inline-block;
+    padding: 1vw 1vw;
+    color:#03fc35;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 0.5vw;
+    overflow: hidden;
+    font-family: "Aldrich", serif;
+
+}
+.custom button:hover, #set:hover{
+    cursor: pointer;
+    background: #03fc35;
+    font-weight: bold;
+    color: #050801;
+    box-shadow: 0 0 5px #03fc35,
+                0 0 25px #03fc35,
+                0 0 50px #03fc35,
+                0 0 200px #03fc35;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+.date-update{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loading-text{
+    font-family: "Aldrich", serif;
+    font-size: 2vw;
+}
+
+/* .bg{
+    filter: blur(0px);
+    z-index: -1;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    position: absolute;
+} */
