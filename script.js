@@ -1,4 +1,4 @@
-const bday = "2021/10/28";
+const bday = "2022/10/28";
 var isCounting = true;
 
 function resetDate(){
@@ -15,7 +15,7 @@ document.getElementById("set").onclick = function(){
         isCounting = false;
     }
     var dateInput = document.getElementById("date-input").value;
-    document.getElementById("date").innerHTML = `Date: <span>${bday}</span> <button id="reset" onclick="resetDate()" > Reset </button>`;
+    document.getElementById("date").innerHTML = `Date: <span>${dateInput}</span> <button id="reset" onclick="resetDate()" > Reset </button>`;
     counting = setInterval(()=>{countdown(dateInput)}, 1000);
     isCounting = true;
 }
